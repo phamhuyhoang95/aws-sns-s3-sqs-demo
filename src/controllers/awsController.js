@@ -118,7 +118,6 @@ class AwsController {
       res.setHeader('Content-Disposition', `attachment; filename="${fileName}"`);
       res.setHeader('Content-Type', 'application/octet-stream');
       fileStream.pipe(res);
-      // Xử lý lỗi từ stream
       fileStream.on('error', (error) => {
         res.status(500).json({
           error: error.message

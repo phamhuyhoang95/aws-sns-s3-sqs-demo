@@ -34,7 +34,6 @@ class SqsWorker {
   async processMessage(message) {
     const body = JSON.parse(message.Body);
     console.log('Processing message:', body);
-    // Thêm logic xử lý tin nhắn tại đây
   }
 
   async deleteMessage(receiptHandle) {
